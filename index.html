@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashmit Kundu</title>
+<meta name="description" content="Tools for the desk I work at, and applied machine learning.">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+
+<header class="wrap intro">
+  <p class="label">Software development</p>
+  <h1>Ashmit Kundu</h1>
+  <p class="lede">Tools for the desk I work at, and applied machine learning.</p>
+  <nav class="links" aria-label="Elsewhere">
+    <a href="https://github.com/ashmit0014">GitHub</a>
+  </nav>
+</header>
+
+<main id="work">
+
+  <section class="wrap project" aria-labelledby="sk">
+    <div class="head">
+      <span class="num">01</span>
+      <div>
+        <h2 id="sk">Sidekick</h2>
+        <p class="meta">Windows · iOS 8 · in daily use</p>
+      </div>
+    </div>
+
+    <p class="lead">A 2012 iPad mini, turned into a calm control surface for one Windows desk. It stands beside the keyboard and takes the small, constant interruptions off the main screen: which AI coding session needs an answer, what is playing, which window you were in, the room's lights. One touch each, without leaving what you are doing.</p>
+
+    <ul class="screens" aria-label="Screenshots from the iPad">
+      <li><figure><a href="assets/home.webp"><img src="assets/home.webp" width="768" height="1024" alt="Home: an amber card for the session that needs an answer, working jobs, the player, and the remaining Claude and Codex allowance"></a><figcaption><b>Home</b> What wants you, and what is playing.</figcaption></figure></li>
+      <li><figure><a href="assets/music.webp"><img src="assets/music.webp" width="768" height="1024" alt="Music: YouTube Music's player with the queue below" loading="lazy"></a><figcaption><b>Music</b> YouTube Music's own queue, picks and playlists.</figcaption></figure></li>
+      <li><figure><a href="assets/desk.webp"><img src="assets/desk.webp" width="768" height="1024" alt="Desk: every window in one list, grouped by desktop, with Minimise and Close on the window in front" loading="lazy"></a><figcaption><b>Desk</b> Every window, grouped by desktop.</figcaption></figure></li>
+      <li><figure><a href="assets/lights.webp"><img src="assets/lights.webp" width="768" height="1024" alt="Lights panel: room switch, brightness, warm white strip, colour strip and each light" loading="lazy"></a><figcaption><b>Lights</b> Off means off: only a switch turns lights on.</figcaption></figure></li>
+      <li><figure><a href="assets/rest.webp"><img src="assets/rest.webp" width="768" height="1024" alt="Rest: a large clock, one line about the work, and the song playing" loading="lazy"></a><figcaption><b>Rest</b> A clock that says whether you can stay away.</figcaption></figure></li>
+    </ul>
+    <p class="note">Real screenshots from the device. The jobs and the chat on Home are made-up test data; rows with private window titles were removed.</p>
+
+    <div class="facts">
+      <div>
+        <h3>Built for old hardware</h3>
+        <p>An A5 CPU, 512 MB and iOS 8's WebKit: no CSS variables, no grid, no modern JavaScript. The page is plain ES5 inside a small Objective-C shell, and it measures its own layout on the device.</p>
+      </div>
+      <div>
+        <h3>No stale actions</h3>
+        <p>Every touch names the window, tab or track it was drawn for, by ids the PC issued. The PC checks again and refuses if anything changed. Nothing moves under a finger.</p>
+      </div>
+      <div>
+        <h3>Local only</h3>
+        <p>The C# agent listens on <code>127.0.0.1</code> and rejects web pages by Host, Origin and fetch site. The iPad reaches it through an SSH tunnel with a pinned host key.</p>
+      </div>
+      <div>
+        <h3>Tested without disturbing the desk</h3>
+        <p><strong>263</strong> automated checks: 210 for the agent's decisions, 36 headless page sequences against a simulated PC, 17 for the gate that keeps GUI tests off a PC in use.</p>
+      </div>
+    </div>
+
+    <div class="motion">
+      <h3>Motion that survived the A5</h3>
+      <p>Every planned animation was measured on the iPad (target: 90&nbsp;% of frames within 20&nbsp;ms, none over 50&nbsp;ms). Most were cut, not tuned.</p>
+      <table>
+        <thead><tr><th scope="col">Motion</th><th scope="col">On the A5</th><th scope="col">Ships</th></tr></thead>
+        <tbody>
+          <tr><td>Panel fades in</td><td>100&nbsp;% of frames within 20&nbsp;ms</td><td class="yes">yes</td></tr>
+          <tr><td>New row fades in place</td><td>90&nbsp;%, longest 34–37&nbsp;ms</td><td class="yes">yes</td></tr>
+          <tr><td>Destination slide</td><td>70–92&nbsp;%, long frames</td><td class="no">cut</td></tr>
+          <tr><td>Panel closing fade</td><td>one 50–60&nbsp;ms frame</td><td class="no">cut</td></tr>
+          <tr><td>Song art crossfade</td><td>passed alone, not with the rest</td><td class="no">cut</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="made">Built with AI coding agents, mainly Claude Code. I decided what it should do, used each version on the iPad every day and judged what had to change; the agents wrote, tested and reviewed the code.</p>
+
+    <p class="cta"><a href="https://github.com/ashmit0014/sidekick-ipad">Source, design note and tests <span aria-hidden="true">→</span></a></p>
+  </section>
+
+  <section class="wrap college" aria-labelledby="col">
+    <h2 id="col" class="label">College projects</h2>
+    <ol>
+      <li>
+        <span class="num">02</span>
+        <div>
+          <h3><a href="https://github.com/ashmit0014/sar-flood-detection">SAR flood mapping</a></h3>
+          <p>U-Net with a ResNet-34 encoder, segmenting flood water in Sentinel-1 radar, which sees through cloud.</p>
+        </div>
+        <p class="result"><span>0.66</span> validation IoU</p>
+      </li>
+      <li>
+        <span class="num">03</span>
+        <div>
+          <h3><a href="https://github.com/ashmit0014/hindi-ner">Hindi named entity recognition</a></h3>
+          <p>Multilingual BERT fine-tuned on WikiAnn to tag people, organisations and places.</p>
+        </div>
+        <p class="result"><span>0.91</span> test F1</p>
+      </li>
+      <li>
+        <span class="num">04</span>
+        <div>
+          <h3><a href="https://github.com/ashmit0014/speech-emotion-recognition">Speech emotion recognition</a></h3>
+          <p>A 1-D CNN over audio features on RAVDESS. The split shares augmented copies of clips, so the score is optimistic.</p>
+        </div>
+        <p class="result"><span>58&nbsp;%</span> over 7 emotions</p>
+      </li>
+    </ol>
+  </section>
+
+</main>
+
+<footer class="wrap foot">
+  <p>Plain HTML and CSS, no tracking. <a href="https://github.com/ashmit0014/ashmit0014.github.io">Source</a></p>
+</footer>
+</body>
+</html>
