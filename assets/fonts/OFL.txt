@@ -1,0 +1,4 @@
+Newsreader (Production Type) and Hanken Grotesk (Hanken Design Co.) are licensed under the SIL Open Font License, Version 1.1.
+Full licence text: https://openfontlicense.org/open-font-license-official-text/
+Source: https://fonts.google.com/specimen/Newsreader and https://fonts.google.com/specimen/Hanken+Grotesk
+Silkscreen (Jason Kottke) is licensed under the SIL Open Font License, Version 1.1; it is the font Bellhollow uses in game. Source: https://fonts.google.com/specimen/Silkscreen
